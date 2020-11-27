@@ -51,6 +51,7 @@ use super::hashing::HashIter;
 /// filter.contains(&1); /* true */
 /// filter.contains(&2); /* false */
 /// ```
+#[derive(Clone)]
 pub struct BloomFilter<R = RandomState, S = RandomState> {
     bits: BitVec,
     num_hashes: u32,
